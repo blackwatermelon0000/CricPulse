@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="PlayerComparisonController"
+            styleClass="root"
+            prefWidth="1000" prefHeight="650">
+
+    <VBox spacing="25" alignment="TOP_CENTER"
+          AnchorPane.topAnchor="30" AnchorPane.leftAnchor="30" AnchorPane.rightAnchor="30">
+
+        <!-- TITLE -->
+        <Label text="Compare Players" styleClass="dashboard-title"/>
+
+        <!-- PLAYER SELECTORS -->
+        <HBox spacing="40" alignment="CENTER">
+            <VBox spacing="10">
+                <Label text="Player 1" styleClass="form-label"/>
+                <ComboBox fx:id="player1Combo" styleClass="form-combo" promptText="Select Player 1" prefWidth="280"/>
+            </VBox>
+            <VBox spacing="10">
+                <Label text="Player 2" styleClass="form-label"/>
+                <ComboBox fx:id="player2Combo" styleClass="form-combo" promptText="Select Player 2" prefWidth="280"/>
+            </VBox>
+        </HBox>
+
+        <!-- COMPARE BUTTON -->
+        <Button text="🔍 Compare" fx:id="compareButton"
+                onAction="#handleCompare" styleClass="landing-button"/>
+
+        <!-- COMPARISON GRID -->
+        <GridPane fx:id="comparisonGrid" hgap="50" vgap="20"
+                  styleClass="compare-grid" />
+
+        <!-- BACK BUTTON -->
+        <HBox alignment="CENTER_RIGHT">
+            <Button text="⬅ Back" onAction="#goHome" styleClass="landing-button"/>
+        </HBox>
+    </VBox>
+</AnchorPane>

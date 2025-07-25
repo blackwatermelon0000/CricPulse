@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="TopScorerController"
+            styleClass="root">
+
+    <!-- HEADER -->
+    <top>
+        <VBox alignment="CENTER" spacing="5" style="-fx-padding: 30;">
+            <Label text="Top Run Scorers"
+                   style="-fx-font-size: 30px; -fx-text-fill: #FFBF00; -fx-font-weight: bold;" />
+            <Label text="Champions with the Willow 🏅"
+                   style="-fx-font-size: 16px; -fx-text-fill: #CCCCCC; -fx-font-style: italic;" />
+        </VBox>
+    </top>
+
+    <!-- TABLE -->
+    <center>
+        <VBox alignment="CENTER">
+            <TableView fx:id="scorerTable" styleClass="top-table" prefWidth="600" maxHeight="400">
+                <columns>
+                    <TableColumn fx:id="nameCol" text="Player Name" prefWidth="300"/>
+                    <TableColumn fx:id="runsCol" text="Runs Scored" prefWidth="200"/>
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+
+    <!-- BACK BUTTON -->
+    <bottom>
+        <HBox alignment="CENTER_RIGHT" spacing="10" style="-fx-padding: 20;">
+            <Button text="⬅ Back" onAction="#goHome" styleClass="landing-button"/>
+        </HBox>
+    </bottom>
+</BorderPane>

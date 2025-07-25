@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="PlayerRolesAssignmentController"
+            styleClass="root"
+            prefWidth="1000" prefHeight="600">
+
+    <VBox alignment="CENTER" spacing="30"
+          AnchorPane.topAnchor="50" AnchorPane.leftAnchor="50" AnchorPane.rightAnchor="50" AnchorPane.bottomAnchor="50">
+
+        <!-- Title -->
+        <Label text="🎯 Assign Role to Player for Tournament" styleClass="dashboard-title"/>
+        <Label text="Link players to tournaments with assigned roles"
+               styleClass="dashboard-subtitle" />
+
+        <!-- Input Fields -->
+        <GridPane hgap="30" vgap="20" alignment="CENTER">
+            <Label text="Player ID:" styleClass="form-label" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <TextField fx:id="playerIdField" styleClass="form-input" prefWidth="300" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+            <Label text="Tournament ID:" styleClass="form-label" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <TextField fx:id="tournamentIdField" styleClass="form-input" prefWidth="300" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+            <Label text="Role:" styleClass="form-label" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+            <TextField fx:id="roleField" styleClass="form-input" prefWidth="300" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+        </GridPane>
+
+        <!-- Buttons -->
+        <HBox spacing="20" alignment="CENTER">
+            <Button text="✅ Assign Role" onAction="#assignRole" styleClass="landing-button"/>
+            <Button text="⬅ Back" onAction="#goHome" styleClass="landing-button"/>
+        </HBox>
+    </VBox>
+</AnchorPane>

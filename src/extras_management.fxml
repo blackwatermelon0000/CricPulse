@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="ExtrasManagementController" styleClass="root">
+
+    <!-- HEADER -->
+    <top>
+        <VBox alignment="CENTER" spacing="10" style="-fx-padding: 30;">
+            <Label text="📋 Extras Entry Form" styleClass="dashboard-title"/>
+            <Label text="Add any extras for the ball entry" styleClass="dashboard-subtitle"/>
+        </VBox>
+    </top>
+
+    <!-- CENTER FORM -->
+    <center>
+        <VBox spacing="20" alignment="CENTER" style="-fx-padding: 20;">
+            <GridPane hgap="20" vgap="15" alignment="CENTER">
+
+                <Label text="Ball ID:" styleClass="form-label" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <TextField fx:id="ballIdField" styleClass="form-input" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                <Label text="Wide:" styleClass="form-label" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                <TextField fx:id="wideField" styleClass="form-input" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                <Label text="No Ball:" styleClass="form-label" GridPane.rowIndex="1" GridPane.columnIndex="2"/>
+                <TextField fx:id="noBallField" styleClass="form-input" GridPane.rowIndex="1" GridPane.columnIndex="3"/>
+
+                <Label text="Bye:" styleClass="form-label" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                <TextField fx:id="byeField" styleClass="form-input" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+                <Label text="Leg Bye:" styleClass="form-label" GridPane.rowIndex="2" GridPane.columnIndex="2"/>
+                <TextField fx:id="legByeField" styleClass="form-input" GridPane.rowIndex="2" GridPane.columnIndex="3"/>
+
+                <Label text="Penalty:" styleClass="form-label" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                <TextField fx:id="penaltyField" styleClass="form-input" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+            </GridPane>
+
+            <!-- ACTION BUTTONS -->
+            <HBox spacing="15" alignment="CENTER">
+                <Button text="➕ Add Extras" onAction="#addExtras" styleClass="landing-button"/>
+                <Button text="🧹 Clear" onAction="#clearForm" styleClass="landing-button"/>
+                <Button text="⬅ Back" onAction="#goHome" styleClass="landing-button"/>
+            </HBox>
+        </VBox>
+    </center>
+</BorderPane>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="PlayerDashboardController"
+            styleClass="root">
+
+    <!-- Header -->
+    <top>
+        <VBox alignment="CENTER" spacing="5" style="-fx-padding: 30;">
+            <Label text="🎯 Player Performance Dashboard"
+                   style="-fx-font-size: 28px; -fx-text-fill: #FFBF00; -fx-font-weight: bold;" />
+            <Label text="Explore individual brilliance"
+                   style="-fx-font-size: 16px; -fx-text-fill: #CCCCCC; -fx-font-style: italic;" />
+        </VBox>
+    </top>
+
+    <!-- Selector + Stats Display -->
+    <center>
+        <VBox spacing="20" alignment="CENTER" style="-fx-padding: 20;">
+            <ComboBox fx:id="playerSelector" promptText="Select Player" styleClass="form-combo" prefWidth="300"/>
+
+            <GridPane fx:id="statsGrid"
+                      hgap="30" vgap="15"
+                      alignment="CENTER"
+                      styleClass="player-stats-box">
+
+                <Label text="Total Runs:" styleClass="form-label" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <Label fx:id="totalRunsLabel" styleClass="stat-value" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                <Label text="Total Wickets:" styleClass="form-label" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                <Label fx:id="totalWicketsLabel" styleClass="stat-value" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                <Label text="Strike Rate:" styleClass="form-label" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                <Label fx:id="strikeRateLabel" styleClass="stat-value" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+                <Label text="Batting Average:" styleClass="form-label" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                <Label fx:id="averageLabel" styleClass="stat-value" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+            </GridPane>
+
+        </VBox>
+    </center>
+
+    <!-- Back Button -->
+    <bottom>
+        <HBox alignment="CENTER_RIGHT" spacing="10" style="-fx-padding: 20;">
+            <Button text="⬅ Back" onAction="#goHome" styleClass="landing-button"/>
+        </HBox>
+    </bottom>
+</BorderPane>

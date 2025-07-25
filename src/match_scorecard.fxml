@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="MatchScorecardController"
+            styleClass="root">
+
+    <!-- HEADER -->
+    <top>
+        <VBox alignment="CENTER" spacing="5" style="-fx-padding: 20;">
+            <Label fx:id="matchInfoLabel"
+                   style="-fx-font-size: 22px; -fx-text-fill: #FFBF00; -fx-font-weight: bold;"/>
+            <Label text="Detailed Scorecard Overview"
+                   style="-fx-font-size: 14px; -fx-text-fill: #CCCCCC; -fx-font-style: italic;"/>
+        </VBox>
+    </top>
+
+    <!-- SCORECARD BODY -->
+    <center>
+        <TabPane fx:id="inningsTabs" style="-fx-padding: 20;" tabClosingPolicy="UNAVAILABLE"/>
+    </center>
+
+    <!-- BACK BUTTON -->
+    <bottom>
+        <HBox alignment="CENTER_RIGHT" spacing="10" style="-fx-padding: 20;">
+            <Button text="\u2B05 Back" onAction="#goHome" styleClass="landing-button"/>
+        </HBox>
+    </bottom>
+</BorderPane>

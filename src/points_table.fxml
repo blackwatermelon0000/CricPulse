@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="PointsTableController" styleClass="root">
+
+    <!-- HEADER -->
+    <top>
+        <VBox alignment="CENTER" spacing="5" style="-fx-padding: 30;">
+            <Label text="🏆 Tournament Points Table"
+                   style="-fx-font-size: 28px; -fx-text-fill: #FFBF00; -fx-font-weight: bold;" />
+            <Label text="The race to the top begins!"
+                   style="-fx-font-size: 16px; -fx-text-fill: #CCCCCC; -fx-font-style: italic;" />
+        </VBox>
+    </top>
+
+    <!-- TABLE -->
+    <center>
+        <TableView fx:id="pointsTable" styleClass="top-table" prefWidth="700" maxHeight="400" style="-fx-padding: 20;">
+            <columns>
+                <TableColumn fx:id="teamCol" text="Team" prefWidth="200"/>
+                <TableColumn fx:id="playedCol" text="Matches" prefWidth="100"/>
+                <TableColumn fx:id="winCol" text="Wins" prefWidth="100"/>
+                <TableColumn fx:id="lossCol" text="Losses" prefWidth="100"/>
+                <TableColumn fx:id="pointsCol" text="Points" prefWidth="100"/>
+            </columns>
+        </TableView>
+    </center>
+
+    <!-- BACK BUTTON -->
+    <bottom>
+        <HBox alignment="CENTER_RIGHT" spacing="10" style="-fx-padding: 20;">
+            <Button text="⬅ Back" onAction="#goHome" styleClass="landing-button"/>
+        </HBox>
+    </bottom>
+</BorderPane>

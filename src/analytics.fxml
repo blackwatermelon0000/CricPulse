@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="AnalyticsController"
+            styleClass="root">
+
+    <top>
+        <VBox alignment="CENTER" spacing="5" style="-fx-padding: 30;">
+            <Label text="Toss / Extras / Stats Analysis"
+                   style="-fx-font-size: 28px; -fx-text-fill: #FFBF00; -fx-font-weight: bold;"/>
+            <Label text="Choose a graph to explore insights"
+                   style="-fx-font-size: 16px; -fx-text-fill: #CCCCCC; -fx-font-style: italic;"/>
+        </VBox>
+    </top>
+
+    <center>
+        <VBox spacing="25" alignment="CENTER" style="-fx-padding: 20;">
+            <ComboBox fx:id="modeCombo"
+                      promptText="Select Chart"
+                      prefWidth="350"
+                      styleClass="form-combo"/>
+
+            <StackPane fx:id="chartPane"
+                       prefHeight="600"
+                       prefWidth="1000"
+                       styleClass="chart-box"/>
+        </VBox>
+    </center>
+
+
+    <bottom>
+        <HBox alignment="CENTER_RIGHT" spacing="10" style="-fx-padding: 20;">
+            <Button text="⬅ Back" onAction="#goHome" styleClass="landing-button"/>
+        </HBox>
+    </bottom>
+</BorderPane>

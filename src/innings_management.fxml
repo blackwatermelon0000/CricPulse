@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="InningsManagementController"
+            styleClass="root">
+
+    <!-- Title Section -->
+    <top>
+        <VBox alignment="CENTER" spacing="10" style="-fx-padding: 30;">
+            <Label text="🏏 Innings Management" styleClass="dashboard-title"/>
+            <Label text="Manage innings details per match" styleClass="dashboard-subtitle"/>
+        </VBox>
+    </top>
+
+    <!-- Input Section -->
+    <center>
+        <VBox spacing="20" alignment="CENTER" style="-fx-padding: 20;">
+
+            <GridPane hgap="15" vgap="15" alignment="CENTER">
+                <!-- Row 1 -->
+                <Label text="Match ID:" styleClass="form-label" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <ComboBox fx:id="matchIdCombo" promptText="Match ID" prefWidth="150" styleClass="form-combo"
+                          GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                <Label text="Batting Team:" styleClass="form-label" GridPane.rowIndex="0" GridPane.columnIndex="2"/>
+                <ComboBox fx:id="battingCombo" promptText="Batting Team" prefWidth="200" styleClass="form-combo"
+                          GridPane.rowIndex="0" GridPane.columnIndex="3"/>
+
+                <!-- Row 2 -->
+                <Label text="Bowling Team:" styleClass="form-label" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                <ComboBox fx:id="bowlingCombo" promptText="Bowling Team" prefWidth="200" styleClass="form-combo"
+                          GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                <Label text="Total Runs:" styleClass="form-label" GridPane.rowIndex="1" GridPane.columnIndex="2"/>
+                <TextField fx:id="runsField" promptText="Total Runs" styleClass="form-input"
+                           GridPane.rowIndex="1" GridPane.columnIndex="3"/>
+
+                <!-- Row 3 -->
+                <Label text="Wickets Lost:" styleClass="form-label" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                <TextField fx:id="wicketsField" promptText="Wickets Lost" styleClass="form-input"
+                           GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+                <Label text="Overs:" styleClass="form-label" GridPane.rowIndex="2" GridPane.columnIndex="2"/>
+                <TextField fx:id="oversField" promptText="Overs" styleClass="form-input"
+                           GridPane.rowIndex="2" GridPane.columnIndex="3"/>
+            </GridPane>
+
+            <!-- Action Button -->
+            <Button text="➕ Add Innings" onAction="#addInnings" styleClass="landing-button"/>
+        </VBox>
+    </center>
+
+    <!-- Table Section -->
+    <bottom>
+        <VBox spacing="10" style="-fx-padding: 20 30 20 30;">
+            <!-- Smaller title -->
+            <Label text="📊 All Innings"
+                   style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #FFBF00;" />
+
+            <!-- Resized TableView -->
+            <TableView fx:id="inningsTable" prefHeight="300" prefWidth="900" styleClass="top-table">
+                <columns>
+                    <TableColumn fx:id="idCol" text="ID" prefWidth="60"/>
+                    <TableColumn fx:id="matchCol" text="Match ID" prefWidth="90"/>
+                    <TableColumn fx:id="batCol" text="Batting Team" prefWidth="170"/>
+                    <TableColumn fx:id="bowlCol" text="Bowling Team" prefWidth="170"/>
+                    <TableColumn fx:id="runsCol" text="Runs" prefWidth="90"/>
+                    <TableColumn fx:id="wicketsCol" text="Wickets" prefWidth="90"/>
+                    <TableColumn fx:id="oversCol" text="Overs" prefWidth="90"/>
+                </columns>
+            </TableView>
+
+            <HBox alignment="CENTER_RIGHT">
+                <Button text="⬅ Back" onAction="#goHome" styleClass="landing-button"/>
+            </HBox>
+        </VBox>
+    </bottom>
+
+</BorderPane>

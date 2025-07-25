@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="TopWicketTakerController" styleClass="root">
+    <top>
+        <VBox alignment="CENTER" spacing="10" style="-fx-padding: 30;">
+            <Label text="🏏 Top Wicket Takers"
+                   style="-fx-font-size: 28px; -fx-text-fill: #FFBF00; -fx-font-weight: bold;" />
+            <Label text="Who’s knocking the stumps?"
+                   style="-fx-font-size: 16px; -fx-text-fill: #CCCCCC; -fx-font-style: italic;" />
+        </VBox>
+    </top>
+
+    <center>
+        <TableView fx:id="table" prefHeight="400" styleClass="top-table">
+            <columns>
+                <TableColumn fx:id="playerCol" text="Player" prefWidth="300"/>
+                <TableColumn fx:id="wicketsCol" text="Wickets" prefWidth="200"/>
+            </columns>
+        </TableView>
+    </center>
+
+    <bottom>
+        <HBox alignment="CENTER_RIGHT" spacing="10" style="-fx-padding: 20;">
+            <Button text="⬅ Back" onAction="#goHome" styleClass="landing-button"/>
+        </HBox>
+    </bottom>
+</BorderPane>

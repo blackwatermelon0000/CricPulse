@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="UmpireManagementController" styleClass="root">
+
+    <!-- HEADER -->
+    <top>
+        <VBox alignment="CENTER" spacing="8" style="-fx-padding: 20 0 10 0;">
+            <Label text="🧑‍️ Umpire Management" styleClass="dashboard-title"/>
+            <Label text="Register match umpires and their nationality" styleClass="dashboard-subtitle"/>
+        </VBox>
+    </top>
+
+    <!-- CENTERED FORM -->
+    <center>
+        <VBox alignment="CENTER" spacing="18" style="-fx-padding: 10;">
+            <GridPane hgap="20" vgap="12" alignment="CENTER" maxWidth="500">
+                <Label text="Umpire Name:" styleClass="form-label" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <TextField fx:id="nameField" styleClass="form-input" prefWidth="280" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                <Label text="Nationality:" styleClass="form-label" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                <TextField fx:id="nationalityField" styleClass="form-input" prefWidth="280" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+            </GridPane>
+
+            <HBox alignment="CENTER" spacing="20">
+                <Button text="➕ Add Umpire" onAction="#addUmpire" styleClass="landing-button"/>
+                <Button text="⬅ Back" onAction="#goHome" styleClass="landing-button"/>
+            </HBox>
+        </VBox>
+    </center>
+</BorderPane>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="LiveMatchController"
+      spacing="20" alignment="TOP_CENTER"
+      styleClass="root" style="-fx-padding: 30;"
+      prefWidth="800" prefHeight="600">
+
+    <Label text="📺 Live Match Simulation"
+           style="-fx-font-size: 28px; -fx-text-fill: #FFBF00; -fx-font-weight: bold;"/>
+
+    <ComboBox fx:id="matchSelector" promptText="Select Match" prefWidth="400" styleClass="form-combo"/>
+
+    <Button text="▶ Start Simulation" onAction="#startSimulation" styleClass="landing-button"/>
+
+    <HBox spacing="30">
+        <Label fx:id="scoreLabel" text="Score: 0" styleClass="card-title"/>
+        <Label fx:id="overLabel" text="Over: 0.0" styleClass="card-title"/>
+        <Label fx:id="wicketLabel" text="Wickets: 0" styleClass="card-title"/>
+    </HBox>
+
+    <TextArea fx:id="commentaryArea" editable="false" wrapText="true"
+              prefWidth="600" prefHeight="300" styleClass="simulation-console"/>
+
+    <Button text="⬅ Back" onAction="#goHome" styleClass="landing-button"/>
+</VBox>

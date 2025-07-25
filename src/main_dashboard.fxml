@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="rootPane" xmlns:fx="http://javafx.com/fxml" fx:controller="MainDashboardController">
+
+    <!-- SIDEBAR -->
+    <left>
+        <ScrollPane fitToWidth="true" hbarPolicy="NEVER" vbarPolicy="AS_NEEDED">
+            <VBox spacing="20" styleClass="sidebar" prefWidth="250">
+                <Label text="CricPulse" styleClass="logo"/>
+
+                <Button text="🏠 Dashboard" onAction="#showDashboard" styleClass="sidebar-button"/>
+                <Button text="➕ Add Player" onAction="#showAddPlayer" styleClass="sidebar-button"/>
+                <Button text="📈 Top Scorer" onAction="#showTopScorer" styleClass="sidebar-button"/>
+                <Button text="📃 Reports " onAction="#showReportsViewer" styleClass="sidebar-button"/>
+                <Button text="🎯 Points Table" onAction="#showPointsTable" styleClass="sidebar-button"/>
+                <Button text="📺 Live Match" onAction="#goLiveSimulation" styleClass="sidebar-button"/>
+                <Button text="🔍 Compare Players" onAction="#showPlayerCompare" styleClass="sidebar-button"/>
+                <Button text="📊 Player Dashboard" onAction="#showPlayerDashboard" styleClass="sidebar-button"/>
+                <Button text="🎮 Match Simulation" onAction="#showMatchSimulation" styleClass="sidebar-button"/>
+                <Button text="📉 Analytics" onAction="#showAnalytics" styleClass="sidebar-button"/>
+                <Button text="📋 Manage Players" onAction="#openPlayerManagement" styleClass="sidebar-button"/>
+                <Button text="🛠 Player Roles" onAction="#showPlayerRolesAssignment" styleClass="sidebar-button"/>
+                <Button text="🧑‍🤝‍🧑 Manage Teams" onAction="#openTeamManagement" styleClass="sidebar-button"/>
+                <Button text="🏆 Manage Tournaments" onAction="#openTournamentManagement" styleClass="sidebar-button"/>
+                <Button text="🗓 Manage Matches" onAction="#showMatchManagement" styleClass="sidebar-button"/>
+                <Button text="🏏 Manage Innings" onAction="#showInningsManagement" styleClass="sidebar-button"/>
+                <Button text="🎯 Ball-by-Ball Entry" onAction="#showBallManagement" styleClass="sidebar-button"/>
+                <Button text="➕ Extras" onAction="#showExtrasManagement" styleClass="sidebar-button"/>
+                <Button text="👬 Partnerships" onAction="#showPartnershipManagement" styleClass="sidebar-button"/>
+                <Button text="🧑‍️ Umpires" onAction="#showUmpireManagement" styleClass="sidebar-button"/>
+                <Button text="⚙ Settings" onAction="#showSettings" styleClass="sidebar-button"/>
+            </VBox>
+        </ScrollPane>
+    </left>
+
+    <!-- CENTER MAIN CONTENT -->
+    <center>
+        <StackPane fx:id="contentPane" styleClass="content-pane">
+            <!-- Initial content will be loaded dynamically -->
+        </StackPane>
+    </center>
+
+</BorderPane>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="QueryReportsController"
+            styleClass="root">
+
+    <VBox spacing="20" alignment="TOP_CENTER"
+          AnchorPane.topAnchor="30" AnchorPane.leftAnchor="40" AnchorPane.rightAnchor="40">
+
+        <!-- Title -->
+        <Label text="📄 Run SQL Reports" styleClass="dashboard-title"/>
+
+        <!-- Controls -->
+        <HBox spacing="15" alignment="CENTER">
+            <ComboBox fx:id="querySelector"
+                      promptText="Select a report"
+                      prefWidth="300"
+                      styleClass="form-combo"/>
+            <Button text="Run Query" onAction="#runSelectedQuery" styleClass="landing-button"/>
+        </HBox>
+
+        <!-- Table View -->
+        <TableView fx:id="resultTable"
+                   prefHeight="450" prefWidth="1000"
+                   styleClass="top-table"/>
+
+        <!-- Back Button -->
+        <HBox alignment="CENTER_RIGHT">
+            <Button text="⬅ Back"
+                    onAction="#goHome"
+                    styleClass="landing-button">
+                <tooltip><Tooltip text="Return to Home"/></tooltip>
+            </Button>
+        </HBox>
+    </VBox>
+</AnchorPane>

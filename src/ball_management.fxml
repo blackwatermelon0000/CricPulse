@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="BallManagementController" styleClass="root">
+
+    <!-- HEADER -->
+    <top>
+        <VBox alignment="CENTER" spacing="10" style="-fx-padding: 30;">
+            <Label text="🎯 Ball Entry Form" styleClass="dashboard-title"/>
+            <Label text="Record ball-by-ball match data" styleClass="dashboard-subtitle"/>
+        </VBox>
+    </top>
+
+    <!-- FORM CENTER -->
+    <center>
+        <VBox spacing="25" alignment="CENTER" style="-fx-padding: 20;">
+            <GridPane hgap="20" vgap="15" alignment="CENTER">
+                <!-- First Row -->
+                <Label text="Match ID:" styleClass="form-label" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <TextField fx:id="matchIdField" styleClass="form-input" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                <Label text="Innings ID:" styleClass="form-label" GridPane.rowIndex="0" GridPane.columnIndex="2"/>
+                <TextField fx:id="inningsIdField" styleClass="form-input" GridPane.rowIndex="0" GridPane.columnIndex="3"/>
+
+                <!-- Second Row -->
+                <Label text="Over No:" styleClass="form-label" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                <TextField fx:id="overNoField" styleClass="form-input" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                <Label text="Ball No:" styleClass="form-label" GridPane.rowIndex="1" GridPane.columnIndex="2"/>
+                <TextField fx:id="ballNoField" styleClass="form-input" GridPane.rowIndex="1" GridPane.columnIndex="3"/>
+
+                <!-- Third Row -->
+                <Label text="Batsman ID:" styleClass="form-label" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                <TextField fx:id="batsmanIdField" styleClass="form-input" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+                <Label text="Bowler ID:" styleClass="form-label" GridPane.rowIndex="2" GridPane.columnIndex="2"/>
+                <TextField fx:id="bowlerIdField" styleClass="form-input" GridPane.rowIndex="2" GridPane.columnIndex="3"/>
+
+                <!-- Fourth Row -->
+                <Label text="Runs:" styleClass="form-label" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                <TextField fx:id="runsField" styleClass="form-input" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+                <Label text="Wicket (0/1):" styleClass="form-label" GridPane.rowIndex="3" GridPane.columnIndex="2"/>
+                <TextField fx:id="isWicketField" styleClass="form-input" GridPane.rowIndex="3" GridPane.columnIndex="3"/>
+            </GridPane>
+
+            <!-- Action Buttons -->
+            <HBox spacing="15" alignment="CENTER">
+                <Button text="➕ Add Ball" onAction="#addBall" styleClass="landing-button"/>
+                <Button text="❌ Clear" onAction="#clearForm" styleClass="landing-button"/>
+                <Button text="⬅ Back" onAction="#goHome" styleClass="landing-button"/>
+            </HBox>
+        </VBox>
+    </center>
+</BorderPane>
+

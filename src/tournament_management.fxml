@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="TournamentManagementController">
+
+    <top>
+        <VBox alignment="CENTER" spacing="10" style="-fx-padding: 20;">
+            <Label text="🏆 Tournament Management" style="-fx-font-size: 28px; -fx-text-fill: #FFBF00; -fx-font-weight: bold;"/>
+            <Label text="Manage cricket tournaments" style="-fx-font-size: 16px; -fx-text-fill: #CCCCCC; -fx-font-style: italic;"/>
+        </VBox>
+    </top>
+
+    <center>
+        <VBox spacing="30" alignment="CENTER" style="-fx-padding: 30;">
+            <!-- Input Form -->
+            <GridPane hgap="20" vgap="15">
+                <Label text="Tournament Name:" GridPane.rowIndex="0" GridPane.columnIndex="0" styleClass="form-label"/>
+                <TextField fx:id="nameField" promptText="e.g., PSL 2024" GridPane.rowIndex="0" GridPane.columnIndex="1" styleClass="form-input"/>
+
+                <Label text="Year:" GridPane.rowIndex="1" GridPane.columnIndex="0" styleClass="form-label"/>
+                <TextField fx:id="yearField" promptText="e.g., 2024" GridPane.rowIndex="1" GridPane.columnIndex="1" styleClass="form-input"/>
+            </GridPane>
+
+            <!-- Buttons -->
+            <HBox spacing="20" alignment="CENTER">
+                <Button text="➕ Add Tournament" onAction="#addTournament" styleClass="landing-button"/>
+                <Button text="❌ Clear" onAction="#clearForm" styleClass="landing-button"/>
+            </HBox>
+
+            <!-- Tournament Table -->
+            <TableView fx:id="tournamentTable" styleClass="top-table" prefHeight="350" prefWidth="500">
+                <columns>
+                    <TableColumn fx:id="idCol" text="ID" prefWidth="60"/>
+                    <TableColumn fx:id="nameCol" text="Name" prefWidth="250"/>
+                    <TableColumn fx:id="yearCol" text="Year" prefWidth="150"/>
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+
+    <bottom>
+        <HBox alignment="CENTER_RIGHT" style="-fx-padding: 10;">
+            <Button text="⬅ Back" onAction="#goHome"/>
+        </HBox>
+    </bottom>
+</BorderPane>

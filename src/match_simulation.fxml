@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="MatchSimulationController"
+            styleClass="root"
+            prefWidth="900" prefHeight="600">
+
+    <VBox spacing="30" alignment="TOP_CENTER"
+          AnchorPane.topAnchor="30" AnchorPane.leftAnchor="40" AnchorPane.rightAnchor="40">
+
+        <!-- TITLE -->
+        <Label text="🎮 Match Simulator" styleClass="dashboard-title"/>
+
+        <!-- MATCH SELECTOR -->
+        <ComboBox fx:id="matchSelector" promptText="Select Match by ID and Teams" styleClass="form-combo" prefWidth="500"/>
+
+        <!-- SIMULATE BUTTON -->
+        <Button text="Simulate Match" onAction="#handleSimulate" styleClass="landing-button"/>
+
+        <!-- RESULTS -->
+        <TextArea fx:id="resultArea" editable="false" wrapText="true" prefHeight="250" prefWidth="600" styleClass="simulation-console"/>
+
+        <!-- BACK BUTTON -->
+        <HBox alignment="CENTER_RIGHT">
+            <Button text="⬅ Back" onAction="#goHome" styleClass="landing-button"/>
+        </HBox>
+    </VBox>
+</AnchorPane>

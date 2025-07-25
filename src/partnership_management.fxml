@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="PartnershipManagementController" styleClass="root">
+
+    <!-- HEADER -->
+    <top>
+        <VBox alignment="CENTER" spacing="10" style="-fx-padding: 30;">
+            <Label text="🤝 Partnership Management" styleClass="dashboard-title"/>
+            <Label text="Log batting partnerships and total runs scored" styleClass="dashboard-subtitle"/>
+        </VBox>
+    </top>
+
+    <!-- FORM -->
+    <center>
+        <VBox alignment="CENTER" spacing="20" style="-fx-padding: 20;">
+            <GridPane hgap="20" vgap="15" alignment="CENTER">
+
+                <Label text="Match ID:" styleClass="form-label" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <TextField fx:id="matchIdField" styleClass="form-input" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                <Label text="Player 1 ID:" styleClass="form-label" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                <TextField fx:id="player1IdField" styleClass="form-input" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                <Label text="Player 2 ID:" styleClass="form-label" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                <TextField fx:id="player2IdField" styleClass="form-input" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+                <Label text="Runs Scored:" styleClass="form-label" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                <TextField fx:id="runsScoredField" styleClass="form-input" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+            </GridPane>
+
+            <HBox spacing="15" alignment="CENTER">
+                <Button text="➕ Add Partnership" onAction="#addPartnership" styleClass="landing-button"/>
+                <Button text="⬅ Back" onAction="#goHome" styleClass="landing-button"/>
+            </HBox>
+        </VBox>
+    </center>
+
+</BorderPane>

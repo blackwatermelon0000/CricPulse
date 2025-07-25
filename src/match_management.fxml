@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="MatchManagementController" styleClass="root">
+
+    <!-- HEADER -->
+    <top>
+        <VBox spacing="10" alignment="CENTER" style="-fx-padding: 30;">
+            <Label text="📅 Match Management" styleClass="dashboard-title"/>
+            <Label text="Schedule and manage cricket matches" styleClass="dashboard-subtitle"/>
+        </VBox>
+    </top>
+
+    <!-- CONTENT CENTER -->
+    <center>
+        <VBox spacing="30" alignment="CENTER" style="-fx-padding: 20;">
+
+            <!-- FORM -->
+            <GridPane hgap="20" vgap="15" alignment="CENTER">
+                <!-- Tournament -->
+                <Label text="Tournament:" styleClass="form-label" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <ComboBox fx:id="tournamentCombo" prefWidth="600" styleClass="form-combo" GridPane.rowIndex="0" GridPane.columnIndex="1" GridPane.columnSpan="3"/>
+
+                <!-- Teams -->
+                <Label text="Team 1:" styleClass="form-label" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                <ComboBox fx:id="team1Combo" prefWidth="200" styleClass="form-combo" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                <Label text="Team 2:" styleClass="form-label" GridPane.rowIndex="1" GridPane.columnIndex="2"/>
+                <ComboBox fx:id="team2Combo" prefWidth="200" styleClass="form-combo" GridPane.rowIndex="1" GridPane.columnIndex="3"/>
+
+                <!-- Date & Venue -->
+                <Label text="Date:" styleClass="form-label" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                <TextField fx:id="dateField" promptText="YYYY-MM-DD" styleClass="form-input" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+                <Label text="Venue:" styleClass="form-label" GridPane.rowIndex="2" GridPane.columnIndex="2"/>
+                <TextField fx:id="venueField" styleClass="form-input" GridPane.rowIndex="2" GridPane.columnIndex="3"/>
+            </GridPane>
+
+            <!-- BUTTON -->
+            <Button text="➕ Add Match" onAction="#addMatch" styleClass="landing-button"/>
+
+            <!-- TABLE -->
+            <TableView fx:id="matchTable" prefHeight="350" prefWidth="900" styleClass="top-table">
+                <columns>
+                    <TableColumn fx:id="idCol" text="ID" prefWidth="60"/>
+                    <TableColumn fx:id="tournamentCol" text="Tournament" prefWidth="180"/>
+                    <TableColumn fx:id="team1Col" text="Team 1" prefWidth="160"/>
+                    <TableColumn fx:id="team2Col" text="Team 2" prefWidth="160"/>
+                    <TableColumn fx:id="dateCol" text="Date" prefWidth="160"/>
+                    <TableColumn fx:id="venueCol" text="Venue" prefWidth="160"/>
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+
+    <!-- FOOTER -->
+    <bottom>
+        <HBox alignment="CENTER_RIGHT" style="-fx-padding: 20;">
+            <Button text="⬅ Back" onAction="#goHome" styleClass="landing-button"/>
+        </HBox>
+    </bottom>
+</BorderPane>
