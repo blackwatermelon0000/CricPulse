@@ -1,39 +1,43 @@
-# 🏏 CricPulse – JavaFX Cricket Management App
+# 🏏 CricPulse – JavaFX Cricket Match Simulation App
 
-**CricPulse** is a desktop app built using JavaFX to simulate and manage cricket matches, teams, and players. It connects to an Oracle Express backend using JDBC.
+**CricPulse** is a desktop application built with JavaFX that allows users to simulate and manage cricket matches, players, teams, scorecards, analytics, and points tables. It connects to an Oracle Express Edition database using JDBC.
 
-## 🚀 Features
+---
 
-- Match simulation with scorecards
-- Player and team management
-- Points table, analytics, top scorers
-- Oracle DB connectivity via ojdbc
-- FXML-based JavaFX UI
+## ✨ Features
 
-## 🧰 Tech Stack
+- Live match simulation and score updates
+- Player, team, and tournament management
+- Points table with automatic updates
+- Player comparison and analytics dashboards
+- Query-based reports for custom data insights
+- Stylish UI built using JavaFX and FXML
 
-- JavaFX + FXML
-- Oracle Express (XE)
-- ojdbc11.jar
-- IntelliJ IDEA
+---
 
-## 🔧 How to Run
+## 💻 Tech Stack
 
-1. Clone this repo
-2. Open it in IntelliJ IDEA
-3. Add `/lib/ojdbc11.jar` to dependencies
-4. Run `CricketApp.java` from `/src/`
-5. Run `cricket_db_script.sql` inside Oracle
-6. Edit DB credentials in `DBConnect.java` if needed
+- **Frontend**: JavaFX, FXML, CSS
+- **Backend**: Oracle XE Database
+- **Database Connector**: ojdbc11.jar (included in `/lib`)
+- **IDE**: IntelliJ IDEA (Recommended)
 
-## 💾 Database Setup
+---
 
-- File: `cricket_db_script.sql`
-- DB: Oracle XE
-- Table structure includes teams, players, matches, scorecards, etc.
+## 📂 Project Structure
+CricPulse/
+├── src/ # All Java source files and UI layouts
+├── lib/ # External libraries (ojdbc11.jar)
+├── cricket_db_script.sql # SQL file to create required tables
+├── README.md # You're reading it!
+├── .gitignore # IntelliJ and Java ignore rules
+└── CricketDB.iml # IntelliJ module file
 
-## 📦 Build JAR (Optional)
+## ⚙️ Setup Instructions
 
-1. File → Project Structure → Artifacts
-2. Add JAR from Modules
-3. Build → Build Artifacts → JAR → Build
+### 1. Clone the Repo
+
+```bash
+git clone https://github.com/blackwatermelon0000/Cricpulse.git
+
+
