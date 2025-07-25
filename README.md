@@ -33,13 +33,6 @@ CricPulse/
 ├── .gitignore # IntelliJ and Java ignore rules
 └── CricketDB.iml # IntelliJ module file
 
-## ⚙️ Setup Instructions
-
-### 1. Clone the Repo
-
-```bash
-git clone https://github.com/blackwatermelon0000/Cricpulse.git
-
 ## 📜 License
 
 This project is **not open source**.
@@ -47,4 +40,13 @@ This project is **not open source**.
 You are welcome to download and use the app for personal or educational purposes. However, you may **not modify, reuse, or redistribute** the source code in any form. All rights reserved by the author.
 
 For collaboration or licensing requests, please contact me directly.
+
+## ⚙️ Setup Instructions
+
+### 1. Clone the Repo
+
+```bash
+git clone https://github.com/blackwatermelon0000/Cricpulse.git
+
+
 
